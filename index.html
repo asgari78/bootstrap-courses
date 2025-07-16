@@ -5,20 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>courses</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/all.min.css">
-    <link rel="stylesheet" href="css/myBootStrap.css">
+    <link rel="stylesheet" href="styles/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/css/style.css">
+    <link rel="stylesheet" href="styles/all.min.css">
+    <link rel="stylesheet" href="styles/css/myBootStrap.css">
     <script>
         window.FontAwesomeConfig = { autoReplaceSvg: false }
     </script>
 </head>
 
 <body>
+    <header class="row d-flex h-auto align-items-center py-1 m-0 px-3">
 
-    <header class="row d-flex align-items-center py-1 px-3">
-
-        <div class="d-flex gap-1 h-100 p-0 align-items-center col-8 col-sm-7 col-md-3 order-1">
+        <div class="d-flex gap-1 h-100 p-0 align-items-center col-2 col-md-4 order-1">
 
             <div class="more-container">
                 <button class="btn border-0 fs-4 mt-2 btn-outline-dark" type="button" data-bs-toggle="offcanvas"
@@ -38,42 +37,99 @@
                 </div>
             </div>
 
-            <div class="banner h-100">
+            <div class="banner h-100 d-none d-lg-flex">
                 <img class="banner-image img-fluid h-100 p-3 p-md-2" src="./images/banner.png" alt="banner"
                     title="banner">
             </div>
 
         </div>
 
-        <div
-            class="search-container p-0 col-12 col-md-4 order-3 order-md-2 d-flex position-relative justify-content-center">
+        <div class="search-container p-0 col-8 col-md-4 order-2 d-flex position-relative justify-content-center">
             <input type="search" class="form-control form-control-lg my-2" name="" id="">
             <i class="fas fa-search position-absolute top-50 translate-middle start-0 p-3 px-3 ms-4"></i>
         </div>
 
         <div
-            class="profile-container col-4 col-sm-5 col-md-3 order-2 order-md-3 d-flex justify-content-end align-items-center g-0 me-md-auto h-100 ">
+            class="profile-container col-2 col-md-3 order-3 d-flex justify-content-end align-items-center g-0 me-md-auto h-100 ">
             <img class="profile-image img-fluid rounded-circle h-75 p-1 border border-2 mt-2 mt-md-0" title="profile"
                 src="images/blank-profile.webp" alt="profile">
-            <span class="py-3 px-2 d-none d-sm-flex">ورود/عضویت</span>
+            <span class="py-3 px-2 d-none d-lg-flex">ورود/عضویت</span>
         </div>
 
     </header>
-
     <div class="container">
-        <main>
-            <section class="banner-start row my-4 my-lg-0 d-flex align-items-center">
+        <main class="d-flex flex-column gap-5 align-items-center">
+            <section class="banner-start row mt-lg-0 d-flex align-items-center">
                 <div
                     class="image-start order-2 order-lg-1 position-relative d-flex justify-content-center align-items-center col-12 col-lg-6 h-100">
                     <img src="./images/banner-start.png" class="img-fluid position-relative" alt="">
-                    <img src="" alt="">
-                    <img src="" alt="">
-                    <img src="" alt="">
+                    <div
+                        class="new-students m-0 d-none d-lg-flex flex-column gap-1 rounded-4 object-fit-cover position-absolute align-items-center">
+                        <h6 class="px-3 fw-bold fs-6 pb-2 pt-3 m-0 text-dark">دانشجوهای تازه کار : </h6>
+                        <ul class="m-0 list-students list-unstyled d-flex flex-row-reverse justify-content-center">
+                            <li class="profile-student shadow-sm z-0 overflow-hidden border-white border border-2">
+                                <img src="./images/students/student1.jpg" class="img-fluid object-fit-cover w-100 h-100"
+                                    alt="student">
+                            </li>
+                            <li class="profile-student shadow-sm z-1 overflow-hidden border-white border border-2">
+                                <img src="./images/students/student2.jpeg"
+                                    class="img-fluid object-fit-cover w-100 h-100" alt="student">
+                            </li>
+                            <li class="profile-student shadow-sm z-2 overflow-hidden border-white border border-2">
+                                <img src="./images/students/student3.webp"
+                                    class="img-fluid object-fit-cover w-100 h-100" alt="student">
+                            </li>
+                            <li class="profile-student shadow-sm z-3 overflow-hidden border-white border border-2">
+                                <img src="./images/students/student4.jpg" class="img-fluid object-fit-cover w-100 h-100"
+                                    alt="student">
+                            </li>
+                            <li
+                                class="profile-student shadow-sm z-3 overflow-hidden border-white border border-2 d-flex justify-content-center align-items-center text-light">
+                                +۶۰
+                            </li>
+                        </ul>
+                    </div>
+                    <div
+                        class="blur-box border border-light border-1 d-none d-sm-flex gap-3 p-2 rounded-3 justify-content-between align-items-center position-absolute start-0 z-3">
+                        <img src="./images/icons/chatgpt3d.png"
+                            class="rounded-circle z-3 m-0 img-fluid object-fit-cover" />
+                        <div>
+                            <h6 class="fs-6 d-flex align-items-center">موتور قدرتمند ChatGtp <i
+                                    class="fas text-white fa-check p-1 bg-primary rounded-circle fs-7 opacity-75 ms-1 me-auto"></i>
+                            </h6>
+                            <p class="fs-7 m-0 text-muted">نمایش مسیر یادگیری از junior تا senior متناسب با علاقه شما
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="icons-start">
+                    <img class="icon-start" src="./images/icons/ai-icon1.webp" alt="ai-icon1" title="ai">
+                    <img class="icon-start" src="./images/icons/ai-icon2.png" alt="ai-icon2">
+                    <img class="icon-start" src="./images/icons/bootstrap-icon.png" alt="bootstrap-icon">
+                    <img class="icon-start" src="./images/icons/chatgpt-icon.png" alt="chatgpt-icon">
+                    <img class="icon-start" src="./images/icons/js-icon.webp" alt="js-icon">
+                    <img class="icon-start" src="./images/icons/json-icon.png" alt="json-icon">
+                    <img class="icon-start" src="./images/icons/mui-icon.png" alt="mui-icon">
+                    <img class="icon-start" src="./images/icons/node-icon.png" alt="node-icon">
+                    <img class="icon-start" src="./images/icons/php-icon.png" alt="php-icon">
+                    <img class="icon-start" src="./images/icons/react-icon.png" alt="react-icon">
+                    <img class="icon-start" src="./images/icons/redux-icon.svg" alt="redux-icon">
+                    <img class="icon-start" src="./images/icons/Typescript-icon.png" alt="Typescript-icon">
+                    <img class="icon-start" src="./images/icons/sass-icon.png" alt="sass-icon">
+                    <img class="icon-start" src="./images/icons/Tailwind-icon.png" alt="Tailwind-icon">
+                    <img class="icon-start" src="./images/icons/vue-icon.png" alt="vue-icon">
+                </div>
+                <div class="icons-start2">
+                    <i class="fas fa-spider"></i>
+                    <i class="fas fa-fingerprint"></i>
+                    <i class="fas fa-mobile-alt	"></i>
+                    <i class="fas fa-tv"></i>
+                    <i class="fas fa-shield-alt"></i>
                 </div>
                 <div
                     class="text-start gap-3 overflow-hidden order-1 order-lg-2 d-flex flex-column align-items-center col-12 col-lg-6">
-                    <h1 class="text-center">
-                        یادگیری برنامه نویسی با
+                    <h1 class="text-center p-2">
+                        مسیر یادگیری برنامه نویسی با
                         <span class="position-relative text-nowrap me-2">
                             هوش مصنوعی
                             <svg width="300px" height="62.1px" enable-background="new 0 0 366 62.1"
@@ -86,8 +142,9 @@
                     </h1>
                     <p class="small text-center text-muted col-12 col-lg-8">
                         با کمک هوش مصنوعی، یادگیری برنامه نویسی برای مبتدیان از همیشه آسان‌تر است
-                        در این سایت با کمک هوش مصنوعی در هر بخشی از آموزش ها سوالات خود را بپرسید تا آموزش عمیق را تجربه
-                        کنید
+                        در این سایت با کمک هوش مصنوعی متناسب با علاقه شما مسیر یادگیری مخصوص شما، با دوره های فارسی زبان
+                        نمایش داده
+                        می شود
                     </p>
                     <ul class="d-flex align-items-center justify-content-center list-unstyled gap-3 gap-sm-4 col-12">
                         <li
@@ -116,22 +173,104 @@
                         </li>
                     </ul>
                     <div class="buttons d-flex gap-3 align-items-center">
-                        <button class="get-started px-3 py-2 btn btn-outline-danger">Get Started</button>
+                        <button class="get-started px-3 py-2 btn btn-danger">شروع یک مسیر</button>
                         <a href="#"
                             class="text-decoration-none p-3 d-flex h-100 align-items-center justify-content-center gap-3">
-                            <h6 class="text-dark m-0">watch video</h6>
+                            <h6 class="text-dark m-0">تماشا کنید</h6>
                             <i class="fas fa-play position-relative d-flex justify-content-center"></i>
                         </a>
                     </div>
+                </div>
+            </section>
+            <section class="counter-start my-3 gap-3 d-grid justify-content-between">
+                <div
+                    class="counter bg-success-subtle d-flex justify-content-center align-items-center gap-4 py-4 px-4 px-lg-5 px-xl-3 rounded-3">
+                    <i class="fas fa-satellite fs-big3 text-success-emphasis"></i>
+                    <div class="d-flex flex-column justify-content-center">
+                        <h5 class="fw-bolder fs-4" id="technology">۶۵+</h5>
+                        <span class="fs-7">پشتیبانی از تکنولوژی ها</span>
+                    </div>
+                </div>
+                <div
+                    class="counter bg-secondary-subtle d-flex justify-content-center align-items-center gap-4 py-4 px-4 px-lg-5 px-xl-3  rounded-3">
+                    <i class="fas fa-atom fs-big3 text-secondary-emphasis"></i>
+                    <div class="d-flex flex-column  justify-content-center">
+                        <h5 class="fw-bolder fs-4" id="alTools">۹+</h5>
+                        <span class="fs-7">ابزارهای هوش مصنوعی</span>
+                    </div>
+                </div>
+                <div
+                    class="counter bg-danger-subtle d-flex justify-content-center align-items-center  gap-4 py-4 px-4 px-lg-5 px-xl-3  rounded-3">
+                    <i class="fas fa-user-graduate fs-big3 text-danger-emphasis"></i>
+                    <div class="d-flex flex-column  justify-content-center">
+                        <h5 class="fw-bolder fs-4" id="students">۳۹۵+</h5>
+                        <span class="fs-7">دانشجو های با مسیر</span>
+                    </div>
+                </div>
+                <div
+                    class="counter bg-primary-subtle d-flex justify-content-center align-items-center gap-4 py-4 px-4 px-lg-5 px-xl-3 rounded-3">
+                    <i class="fas fa-sitemap fs-big3 text-primary-emphasis"></i>
+                    <div class="d-flex flex-column  justify-content-center">
+                        <h5 class="fw-bolder fs-4" id="roadMap">۴۷۸+</h5>
+                        <span class="fs-7">RoadMap کشیده شده</span>
+                    </div>
+                </div>
+            </section>
+            <section class="ready-map d-flex my-5 flex-column align-items-center w-100">
+                <div class="header d-flex flex-column gap-1 align-items-center">
+                    <h2 class="fw-bold">مسیرهای آماده</h2>
+                    <p class="text-muted fs-7">پرطرفدارترین مسیرهای مورد علاقه دانشجوها در لیست زیر آمده است</p>
+                </div>
+                <div
+                    class="filter-list bg-primary-subtle w-100 d-flex justify-content-start rounded-2 align-items-center">
+                    <ul class="list-unstyled gap-2 w-100 m-0 p-2">
+                        <!-- <li class="text-primary-emphasis py-2 px-4 rounded-3 active">همه</li>
+                        <li class="text-primary-emphasis py-2 px-4 rounded-3 ">موبایل</li>
+                        <li class="text-primary-emphasis py-2 px-4 rounded-3 ">طراحی سایت</li>
+                        <li class="text-primary-emphasis py-2 px-4 rounded-3 ">طراحی</li>
+                        <li class="text-primary-emphasis py-2 px-4 rounded-3 ">دسکتاپ</li>
+                        <li class="text-primary-emphasis py-2 px-4 rounded-3 ">سیستم و سخت افزار</li>
+                        <li class="text-primary-emphasis py-2 px-4 rounded-3 ">هوش مصنوعی</li>
+                        <li class="text-primary-emphasis py-2 px-4 rounded-3 ">بازی سازی</li> -->
+                    </ul>
+                </div>
+                <div class="filtered-items p-3 w-100">
+                    <ul class="list-unstyled d-grid gap-3 w-100">
+                        <!-- <li class="border d-flex flex-column rounded-4 gap-3 overflow-hidden">
+                            <img src="./images/readyMaps/katlin.png" class="img-fluid" alt="kotlin">
+                            <h5 class="m-0 mx-2">مسیر یادگیری kotlin</h5>
+                            <p class="disc text-muted fs-7 mx-3 my-0">زبان</p>
+                            <div
+                                class="footer mt-auto d-flex flex-column gap-2 w-100 justify-content-between align-items-center">
+                                <div class="rate me-auto ms-2">
+                                    <span class="fs-7 text-muted">۴.۳</span>
+                                    <i class="far fa-star text-success"></i>
+                                </div>
+                                <button
+                                    class="view-btn py-2 rounded-bottom-4 rounded-top-0 w-100 btn btn-primary">مشاهده
+                                    مسیر</button>
+                            </div>
+                        </li> -->
+                    </ul>
+                    <nav id="paginationItems" class="">
+                        <ul class="pagination pagination-lg flex-row-reverse justify-content-center">
+                            <li class="disabled" id="prevPage">
+                                <a class="page-link" href="#">صفحه قبل</a>
+                            </li>
+                            <li class="page-item" id="nextPage">
+                                <a class="page-link" href="#">صفحه بعد</a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
             </section>
         </main>
         <footer></footer>
     </div>
 
+    <script type="module" src="js/script.js"></script>
 
     <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/script.js"></script>
     <script src="js/all.min.js"></script>
 </body>
 

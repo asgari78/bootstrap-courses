@@ -1,0 +1,313 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Vazir";
+  box-sizing: border-box;
+}
+
+body {
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Vazir";
+}
+body > header {
+  width: 100%;
+  max-width: 1600px;
+  transition: all 0.2s ease-in;
+}
+body > header.active-fixed {
+  position: fixed;
+  top: 0;
+  background-color: #fff;
+  z-index: 10;
+  box-shadow: 0px 15px 30px -30px #1f1f1f;
+}
+body > header.active-fixed + .container main {
+  margin-top: 4.8rem !important;
+}
+@media screen and (max-width: 768px) {
+  body > header {
+    margin-bottom: 4rem;
+  }
+}
+body > header .banner-image {
+  cursor: pointer;
+  transition: all 0.3s;
+  max-width: 130px;
+}
+body > header .banner-image:hover {
+  transform: scale(1.06);
+}
+body > header .profile-container * {
+  transition: all 0.2s ease-in-out;
+}
+body > header .profile-container img {
+  cursor: pointer;
+  max-width: 55px;
+}
+body > header .profile-container img:hover {
+  transform: scale(1.05);
+  border-color: #5f9fff !important;
+}
+body > header .profile-container span {
+  cursor: pointer;
+}
+body > header .profile-container span:hover {
+  color: #5f9fff;
+}
+body > header .search-container .fa-search {
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+body > header .search-container .fa-search:hover {
+  color: #0d6efd;
+}
+body .container main section.banner-start::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+body .container main section.banner-start div.image-start {
+  position: relative;
+}
+body .container main section.banner-start div.image-start img {
+  max-height: 450px;
+  object-fit: contain;
+  opacity: 0.88;
+}
+body .container main section.banner-start div.image-start .new-students {
+  background: url("../../images/01.png") #0ab163;
+  background-size: cover;
+  height: 6rem;
+  width: 11rem;
+  top: 7rem;
+  right: 3rem;
+  z-index: 3;
+}
+body .container main section.banner-start div.image-start .new-students h6 {
+  text-shadow: 0px 5px 15px #ffffff;
+}
+body .container main section.banner-start div.image-start .new-students .list-students .profile-student,
+body .container main section.banner-start div.image-start .new-students .list-students .profile-more {
+  height: 2.3rem;
+  width: 2.3rem;
+  margin-right: -0.5rem;
+  border-radius: 50%;
+  background-color: #0d6dfd;
+}
+body .container main section.banner-start div.image-start .blur-box {
+  bottom: 2rem;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  width: 20rem;
+  box-shadow: 30px 5px 40px -30px rgba(0, 0, 0, 0.7882352941);
+}
+body .container main section.banner-start div.image-start .blur-box img {
+  width: 4.5rem;
+}
+body .container main section.banner-start div.text-start {
+  background-color: rgba(255, 255, 255, 0.7882352941);
+  z-index: 2;
+}
+body .container main section.banner-start div.text-start h1 svg {
+  position: absolute;
+  top: 55%;
+  left: 40%;
+  transform: translate(-50%, -50%) scaleX(-1);
+  width: 130%;
+  z-index: -1;
+}
+body .container main section.banner-start div.text-start path {
+  fill: #F7C32E;
+}
+body .container main section.banner-start div.text-start .buttons i.fa-play {
+  border: none;
+  background-color: #0d6dfd;
+  border-radius: 50%;
+  height: 2.3rem;
+  width: 2.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  z-index: 2;
+  transition: all 0.2s ease-in-out;
+}
+body .container main section.banner-start div.text-start .buttons i.fa-play::after {
+  content: "";
+  background-color: rgba(6, 81, 194, 0.3137254902);
+  border: none;
+  border-radius: 50%;
+  padding: 1.6rem;
+  position: absolute;
+  transition: all 0.2s ease-in-out;
+  z-index: -1;
+}
+body .container main section.banner-start div.text-start .buttons i.fa-play:hover {
+  background-color: #0f59c7;
+}
+body .container main section.banner-start div.text-start .buttons i.fa-play:hover::after {
+  transform: scale(1.07);
+}
+body .container main section.banner-start div.icons-start img {
+  position: absolute;
+  z-index: 3;
+  height: auto;
+  object-fit: cover;
+  display: none;
+}
+body .container main section.banner-start div.icons-start2 i {
+  position: absolute;
+  color: rgba(202, 143, 120, 0.3098039216);
+}
+body .container main section.banner-start div.icons-start2 i:nth-child(1) {
+  top: 20vh;
+  left: 12vw;
+  font-size: 1.6rem;
+}
+body .container main section.banner-start div.icons-start2 i:nth-child(2) {
+  top: 33vh;
+  left: 22vw;
+  font-size: 2rem;
+}
+body .container main section.banner-start div.icons-start2 i:nth-child(3) {
+  top: 40vh;
+  left: 10vw;
+  font-size: 2.5rem;
+}
+body .container main section.banner-start div.icons-start2 i:nth-child(4) {
+  top: 15vh;
+  left: 72vw;
+  font-size: 1.2rem;
+}
+body .container main section.banner-start div.icons-start2 i:nth-child(5) {
+  top: 12vh;
+  left: 52vw;
+  font-size: 2.3rem;
+}
+body .container main section.counter-start {
+  width: 100%;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+}
+@media screen and (max-width: 1200px) {
+  body .container main section.counter-start {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto;
+  }
+}
+@media screen and (max-width: 576px) {
+  body .container main section.counter-start {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto auto auto auto;
+  }
+}
+body .container main section.counter-start .counter {
+  min-width: 13rem;
+  display: flex;
+}
+body .container main section.ready-map .filter-list ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  overflow-x: scroll;
+  grid-auto-flow: column;
+}
+@media screen and (min-width: 576px) {
+  body .container main section.ready-map .filter-list ul {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media screen and (min-width: 992px) {
+  body .container main section.ready-map .filter-list ul {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+@media screen and (min-width: 1200px) {
+  body .container main section.ready-map .filter-list ul {
+    grid-template-columns: repeat(8, 1fr);
+    overflow-x: visible;
+  }
+}
+body .container main section.ready-map .filter-list ul li {
+  cursor: pointer;
+  text-wrap: nowrap;
+}
+body .container main section.ready-map .filter-list ul li.active {
+  background-color: #0d6efd;
+  color: white !important;
+}
+body .container main section.ready-map .filtered-items ul {
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  transition: all 0.2s ease-in;
+}
+body .container main section.ready-map .filtered-items ul.fade-out {
+  opacity: 0;
+}
+body .container main section.ready-map .filtered-items ul.fade-in {
+  opacity: 1;
+}
+@media screen and (min-width: 576px) {
+  body .container main section.ready-map .filtered-items ul {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+  }
+}
+@media screen and (min-width: 992px) {
+  body .container main section.ready-map .filtered-items ul {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+  }
+}
+@media screen and (min-width: 1200px) {
+  body .container main section.ready-map .filtered-items ul {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+  }
+}
+body .container main section.ready-map .filtered-items ul li {
+  transition: all 0.2s ease-in-out;
+  background-color: #fff;
+}
+body .container main section.ready-map .filtered-items ul li img {
+  transition: all 0.2s ease-in-out;
+  height: 10rem;
+  object-fit: cover;
+  filter: brightness(0.75);
+}
+body .container main section.ready-map .filtered-items ul li:hover {
+  background-color: #f0f2f7;
+  border-top-left-radius: 0.1rem !important;
+  border-top-right-radius: 0.1rem !important;
+}
+body .container main section.ready-map .filtered-items ul li:hover img {
+  transform: scale(1.05);
+  filter: brightness(1);
+}
+body .container main section.ready-map .filtered-items nav {
+  display: none;
+}
+body .container main section.ready-map .filtered-items nav.active {
+  display: block;
+}
+body .container main section.ready-map .filtered-items nav .pagination a {
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+@font-face {
+  font-family: "Vazir";
+  src: url("../../webfonts/Vazir.eot");
+  /* IE6-8 */
+  src: url("../../webfonts/Vazir.eot?#iefix") format("embedded-opentype"), url("../../webfonts/Vazir.woff2") format("woff2"), url("../../webfonts/Vazir.woff") format("woff"), url("../../webfonts/Vazir.ttf") format("truetype");
+  /* Safari, Android, iOS */
+  font-weight: normal;
+  font-style: normal;
+}/*# sourceMappingURL=style.css.map */
