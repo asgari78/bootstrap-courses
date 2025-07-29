@@ -366,6 +366,62 @@ body {
             }
         }
     }
+
+    section.comments-container {
+        background: url("../../images/backgrounds/bg1.jpg") no-repeat;
+        background-size: cover;
+
+
+        .comments-box {
+            .cmnt {
+                opacity: .85;
+                transition: all .2s ease-in;
+                max-width: 40rem;
+
+                img {
+                    width: 6rem;
+                    height: 6rem;
+                    transition: all .2s ease-in;
+                }
+
+                .rate-box i {
+                    color: #F7C32E;
+                }
+
+                &:hover {
+                    opacity: 1;
+
+                    img {
+                        border-radius: 2rem !important;
+                    }
+                }
+            }
+
+            @media screen and (min-width:992px) {
+                height: 30rem;
+                width: 100%;
+                position: relative;
+
+                .cmnt {
+                    position: absolute;
+
+                    &:nth-child(1) {
+                        width: 25rem !important;
+                        height: 22rem !important;
+                        left: calc(35vw - 20rem);
+                        top: 0rem;
+                    }
+
+                    &:nth-child(2) {
+                        width: 27rem !important;
+                        height: 22rem !important;
+                        right: calc(35vw - 20rem);
+                        top: 5rem;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @font-face {

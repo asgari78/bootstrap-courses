@@ -15,12 +15,12 @@
 </head>
 
 <body>
-    <header class="row d-flex h-auto align-items-center py-1 m-0 px-3">
+    <header class="row d-flex h-auto align-items-center py-1 m-0 px-2 px-md-3">
 
         <div class="d-flex gap-1 h-100 p-0 align-items-center col-2 col-md-4 order-1">
 
             <div class="more-container">
-                <button class="btn border-0 fs-4 mt-2 btn-outline-dark" type="button" data-bs-toggle="offcanvas"
+                <button class="btn border-0 fs-4 mt-0 mt-lg-2 btn-outline-dark" type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
                     <i class="fas fa-bars"></i>
                 </button>
@@ -51,14 +51,14 @@
 
         <div
             class="profile-container col-2 col-md-3 order-3 d-flex justify-content-end align-items-center g-0 me-md-auto h-100 ">
-            <img class="profile-image img-fluid rounded-circle h-75 p-1 border border-2 mt-2 mt-md-0" title="profile"
+            <img class="profile-image img-fluid rounded-circle h-75 p-1 border border-2" title="profile"
                 src="images/blank-profile.webp" alt="profile">
             <span class="py-3 px-2 d-none d-lg-flex">ورود/عضویت</span>
         </div>
 
     </header>
     <div class="container">
-        <main class="d-flex flex-column gap-5 align-items-center">
+        <main class="d-flex flex-column gap-4 align-items-center">
             <section class="banner-start row mt-lg-0 d-flex align-items-center">
                 <div
                     class="image-start order-2 order-lg-1 position-relative d-flex justify-content-center align-items-center col-12 col-lg-6 h-100">
@@ -128,7 +128,7 @@
                 </div>
                 <div
                     class="text-start gap-3 overflow-hidden order-1 order-lg-2 d-flex flex-column align-items-center col-12 col-lg-6">
-                    <h1 class="text-center p-2">
+                    <h1 class="text-center m-0 p-2">
                         مسیر یادگیری برنامه نویسی با
                         <span class="position-relative text-nowrap me-2">
                             هوش مصنوعی
@@ -140,13 +140,16 @@
                             </svg>
                         </span>
                     </h1>
-                    <p class="small text-center text-muted col-12 col-lg-8">
-                        با کمک هوش مصنوعی، یادگیری برنامه نویسی برای مبتدیان از همیشه آسان‌تر است
-                        در این سایت با کمک هوش مصنوعی متناسب با علاقه شما مسیر یادگیری مخصوص شما، با دوره های فارسی زبان
-                        نمایش داده
-                        می شود
+                    <p class="small m-0 text-center text-muted d-flex flex-column gap-2 col-11 col-lg-10">
+                        <span class="fs-6 text-dark d-block">
+                            مسیر یادگیری تو، اینجا رسم میشه! از مبتدی تا حرفه ای، با معرفی بهترین دوره ها
+                        </span>
+                        یادگیری برنامه‌نویسی و تکنولوژی‌های روز دنیا را با مسیرهای هوشمند و شخصی‌سازی‌شده شروع کن!
+                        در اینجا می‌توانید بهترین دوره‌ها، منابع و راهنمایی‌های یادگیری را متناسب با سطح و علایق خود
+                        پیدا کنید. کافی است شروع کنی، بقیه‌اش با ما!
                     </p>
-                    <ul class="d-flex align-items-center justify-content-center list-unstyled gap-3 gap-sm-4 col-12">
+                    <ul
+                        class="d-flex m-0 align-items-center justify-content-center list-unstyled gap-3 gap-sm-4 col-12">
                         <li
                             class="d-flex flex-column flex-sm-row align-items-center align-items-sm-start justify-content-sm-center align-items-center gap-2">
                             <i class="fas fa-certificate position-relative fs-5">
@@ -172,7 +175,7 @@
                             <p class="fs-7 m-0">مهارت تمرین</p>
                         </li>
                     </ul>
-                    <div class="buttons d-flex gap-3 align-items-center">
+                    <div class="buttons m-0 d-flex gap-3 align-items-center">
                         <button class="get-started px-3 py-2 btn btn-danger">شروع یک مسیر</button>
                         <a href="#"
                             class="text-decoration-none p-3 d-flex h-100 align-items-center justify-content-center gap-3">
@@ -216,7 +219,7 @@
                     </div>
                 </div>
             </section>
-            <section class="ready-map d-flex my-5 flex-column align-items-center w-100">
+            <section class="ready-map d-flex mt-5 flex-column align-items-center w-100">
                 <div class="header d-flex flex-column gap-1 align-items-center">
                     <h2 class="fw-bold">مسیرهای آماده</h2>
                     <p class="text-muted fs-7">پرطرفدارترین مسیرهای مورد علاقه دانشجوها در لیست زیر آمده است</p>
@@ -255,18 +258,73 @@
                     <nav id="paginationItems" class="">
                         <ul class="pagination pagination-lg flex-row-reverse justify-content-center">
                             <li class="disabled" id="prevPage">
-                                <a class="page-link" href="#">صفحه قبل</a>
+                                <a class="page-link">صفحه قبل</a>
                             </li>
                             <li class="page-item" id="nextPage">
-                                <a class="page-link" href="#">صفحه بعد</a>
+                                <a class="page-link">صفحه بعد</a>
                             </li>
                         </ul>
                     </nav>
                 </div>
             </section>
         </main>
-        <footer></footer>
     </div>
+
+    <section class="comments-container w-100 d-flex flex-column align-items-center py-5">
+        <div class="header d-flex flex-column align-items-center gap-1">
+            <h1 class="text-center fs-3 fw-bold">تجربه‌های یادگیری دانشجویان ما</h1>
+            <p class="text-center px-3 text-muted fs-7">
+                نظر افرادی که با مسیرهای یادگیری سایت ما، در حال پیشرفت هستند را بخوانید و الهام بگیرید!
+            </p>
+            <button class="btn btn-primary">مشاهده نظرات</button>
+        </div>
+        <div class="comments-box mt-3 d-flex flex-column align-items-center p-3 gap-4">
+            <div
+                class="cmnt p-4 gap-3 d-flex flex-column align-items-center bg-white shadow rounded-4 overflow-hidden w-100">
+                <img src="./images/students/comments/student2.jpg" class="img-fluid rounded-circle" alt="comment1">
+                <h6 class="user-name fs-6 fw-bold">علی (در حال یادگیری پایتون)</h6>
+                <blockquote class="fs-7 text-center text-muted m-0">
+                    <i class="fas fa-quote-left"></i>
+                    من همیشه دوست داشتم برنامه‌نویسی یاد بگیرم، اما نمی‌دانستم از کجا شروع کنم. با کمک مسیر
+                    یادگیری پایتون این سایت، تونستم قدم‌به‌قدم پیش برم و الان بعد از ۳ ماه دارم پروژه‌های کوچک
+                    خودم رو می‌نویسم! دوره‌های پیشنهادی واقعاً عالی و به‌دردبخور بودند. ممنون از این راهنمایی
+                    حرفه‌ای!
+                    <i class="fas fa-quote-left"></i>
+                </blockquote>
+                <div class="rate-box d-flex gap-1 align-items-center">
+                    <i class="fas fa-star-half-alt active"></i>
+                    <i class="fas fa-star active"></i>
+                    <i class="fas fa-star active"></i>
+                    <i class="fas fa-star active"></i>
+                    <i class="fas fa-star active"></i>
+                </div>
+            </div>
+            <div
+                class="cmnt p-4 gap-3 d-flex flex-column align-items-center bg-white shadow rounded-4 overflow-hidden w-100">
+                <img src="./images/students/comments/student1.jpg" class="img-fluid rounded-circle" alt="">
+                <h6 class="user-name fs-6 fw-bold">سارا (در حال یادگیری توسعه وب)</h6>
+                <blockquote class="fs-7 text-center text-muted m-0">
+                    <i class="fas fa-quote-left"></i>
+                    به عنوان کسی که هیچ پیش‌زمینه‌ای از برنامه‌نویسی نداشت، مسیر Front-End این سایت برام
+                    مثل یک معجزه بود! از HTML و CSS شروع کردم و حالا دارم جاوااسکریپت رو عمیق‌تر یاد می‌گیرم.
+                    سیستم پیشنهاد دوره‌ها واقعاً کمک‌کننده است و احساس می‌کنم دارم در مسیر درستی حرکت می‌کنم.
+                    توصیه‌های سایت شما زندگی من رو تغییر داد!
+                    <i class="fas fa-quote-left"></i>
+                </blockquote>
+                <div class="rate-box">
+                    <i class="fas fa-star active"></i>
+                    <i class="fas fa-star active"></i>
+                    <i class="fas fa-star active"></i>
+                    <i class="fas fa-star active"></i>
+                    <i class="fas fa-star active"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+
+    </footer>
 
     <script type="module" src="js/script.js"></script>
 

@@ -125,7 +125,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
     function renderPagination() {
-        // حذف دکمه‌های قبلی شماره صفحات
+        // پاک کردن دکمه‌های شماره صفحات قبلی
         [...paginationUl.querySelectorAll("li.page-number")].forEach(li => li.remove());
 
         const totalPages = Math.ceil(currentItems.length / itemsPerPage);
@@ -138,8 +138,17 @@ document.addEventListener("DOMContentLoaded", () => {
             paginationUl.style.display = "flex";
         }
 
-        // ساخت دکمه‌های صفحه (شماره صفحات)
-        for (let i = 1; i <= totalPages; i++) {
+        // محاسبه بازه نمایشی بر اساس صفحه فعلی
+        let startPage = Math.max(1, currentPage - 1);
+        let endPage = Math.min(totalPages, startPage + 2);
+
+        // اگر نزدیک انتها هستیم، اصلاح مقدار startPage برای اینکه همیشه ۳ عدد داشته باشیم
+        if (endPage - startPage < 2 && startPage > 1) {
+            startPage = Math.max(1, endPage - 2);
+        }
+
+        // ساخت دکمه‌های شماره صفحات بین startPage تا endPage
+        for (let i = startPage; i <= endPage; i++) {
             const li = document.createElement("li");
             li.classList.add("page-item", "page-number");
             if (i === currentPage) li.classList.add("active");
@@ -165,7 +174,19 @@ document.addEventListener("DOMContentLoaded", () => {
         } else {
             nextBtn.classList.remove("disabled");
         }
+
+        // تنظیم متن دکمه ها بر اساس اندازه صفحه به صورت ریسپانسیو
+        window.addEventListener("scroll", () => {
+            if (window.innerWidth < 1200) {
+                prevBtn.children[0].innerHTML = "قبلی"
+                nextBtn.children[0].innerHTML = "بعدی"
+            } else {
+                prevBtn.children[0].innerHTML = "صفحه قبل"
+                nextBtn.children[0].innerHTML = "صفحه بعد"
+            }
+        })
     }
+
     function updatePaginationAndItems() {
         renderPageItems();
         renderPagination();

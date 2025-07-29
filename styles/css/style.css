@@ -301,6 +301,51 @@ body .container main section.ready-map .filtered-items nav .pagination a {
   cursor: pointer;
   font-size: 1.2rem;
 }
+body section.comments-container {
+  background: url("../../images/backgrounds/bg1.jpg") no-repeat;
+  background-size: cover;
+}
+body section.comments-container .comments-box .cmnt {
+  opacity: 0.85;
+  transition: all 0.2s ease-in;
+  max-width: 40rem;
+}
+body section.comments-container .comments-box .cmnt img {
+  width: 6rem;
+  height: 6rem;
+  transition: all 0.2s ease-in;
+}
+body section.comments-container .comments-box .cmnt .rate-box i {
+  color: #F7C32E;
+}
+body section.comments-container .comments-box .cmnt:hover {
+  opacity: 1;
+}
+body section.comments-container .comments-box .cmnt:hover img {
+  border-radius: 2rem !important;
+}
+@media screen and (min-width: 992px) {
+  body section.comments-container .comments-box {
+    height: 30rem;
+    width: 100%;
+    position: relative;
+  }
+  body section.comments-container .comments-box .cmnt {
+    position: absolute;
+  }
+  body section.comments-container .comments-box .cmnt:nth-child(1) {
+    width: 25rem !important;
+    height: 22rem !important;
+    left: calc(35vw - 20rem);
+    top: 0rem;
+  }
+  body section.comments-container .comments-box .cmnt:nth-child(2) {
+    width: 27rem !important;
+    height: 22rem !important;
+    right: calc(35vw - 20rem);
+    top: 5rem;
+  }
+}
 
 @font-face {
   font-family: "Vazir";
