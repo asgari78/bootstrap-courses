@@ -4,10 +4,14 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "sass styles/sass/style.scss styles/css/style.css --watch"
+    "sass": "sass styles/sass/style.scss styles/css/style.css --watch",
+    "build": "sass ./styles/sass/style.scss ./styles/css/style.css"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "sass": "^1.92.1"
+  }
 }
