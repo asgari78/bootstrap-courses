@@ -1,7 +1,6 @@
 import readyMaps from "./data.js";
 
 
-// icons move, mouse move "random render"
 const icons = document.querySelectorAll(".icon-start")
 let iconsShow = [];
 let translateRandom;
