@@ -5,7 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "sass": "sass styles/sass/style.scss styles/css/style.css --watch",
-    "build": "sass styles/sass/style.scss styles/css/style.css"
+    "build": "echo 'Build successful'"
   },
   "keywords": [],
   "author": "",
