@@ -7,24 +7,34 @@
     box-sizing: border-box;
 }
 
+html {
+    overflow-x: hidden;
+}
+
 body {
     user-select: none;
     display: flex;
     flex-direction: column;
     align-items: center;
     font-family: "Vazir";
+    overflow-x: hidden;
 
     >header {
         width: 100%;
         max-width: 1600px;
         transition: all .2s ease-in;
+        box-shadow: 0px 35px 40px -35px #ffffff00;
 
         &.active-fixed {
             position: fixed;
             top: 0;
             background-color: #fff;
             z-index: 10;
-            box-shadow: 0px 15px 30px -30px #1f1f1f;
+            box-shadow: 0px 25px 35px -34px #000000 !important;
+
+            @media screen and (max-width:576px) {
+                box-shadow: 0px 5px 25px -15px #000000 !important;
+            }
         }
 
         &.active-fixed+.container main {
@@ -40,10 +50,6 @@ body {
             cursor: pointer;
             transition: all .3s;
             max-width: 130px;
-
-            &:hover {
-                transform: scale(1.06);
-            }
         }
 
         .profile-container {
@@ -54,6 +60,10 @@ body {
             img {
                 cursor: pointer;
                 max-width: 55px;
+
+                @media screen and (max-width:450px) {
+                    width: 45px;
+                }
 
                 &:hover {
                     transform: scale(1.05);
@@ -70,12 +80,16 @@ body {
             }
         }
 
-        .search-container .fa-search {
-            cursor: pointer;
-            transition: all .2s ease-in-out;
+        .search-container {
+            max-width: 35rem;
 
-            &:hover {
-                color: $primaryColor;
+            .fa-search {
+                cursor: pointer;
+                transition: all .2s ease-in-out;
+
+                &:hover {
+                    color: $primaryColor;
+                }
             }
         }
     }
@@ -99,11 +113,11 @@ body {
                     img {
                         max-height: 450px;
                         object-fit: contain;
-                        opacity: 0.88;
+                        opacity: 0.80;
                     }
 
                     .new-students {
-                        background: url("../../images/01.png") #0ab163;
+                        background: url("../../images/01.png") #0ab1638f;
                         background-size: cover;
                         height: 6rem;
                         width: 11rem;
@@ -111,8 +125,9 @@ body {
                         right: 3rem;
                         z-index: 3;
 
+
                         h6 {
-                            text-shadow: 0px 5px 15px #ffffff;
+                            text-shadow: 0px 1px 10px #3d3d3d;
                         }
 
                         .list-students {
@@ -145,20 +160,36 @@ body {
                     background-color: #ffffffc9;
                     z-index: 2;
 
-                    h1 svg {
-                        position: absolute;
-                        top: 55%;
-                        left: 40%;
-                        transform: translate(-50%, -50%) scaleX(-1);
-                        width: 130%;
-                        z-index: -1;
+                    h1 {
+                        line-height: calc(2.6rem + .5vw);
+                        font-size: calc(1.5rem + .5vw) !important;
+
+                        svg {
+                            position: absolute;
+                            top: 55%;
+                            left: 40%;
+                            transform: translate(-50%, -50%) scaleX(-1);
+                            width: 130%;
+                            z-index: -1;
+                        }
                     }
 
                     path {
-                        fill: #F7C32E;
+                        fill: #ffd76ab9;
                     }
 
                     .buttons {
+                        button {
+                            width: 100%;
+                            max-width: 20rem;
+                            padding: 1rem 0;
+
+                            @media screen and (min-width:992px) {
+                                width: 50%;
+                                max-width: 15rem;
+                            }
+                        }
+
                         i.fa-play {
                             border: none;
                             background-color: #0d6dfd;
@@ -171,6 +202,7 @@ body {
                             color: white;
                             z-index: 2;
                             transition: all .2s ease-in-out;
+                            cursor: pointer;
 
                             &::after {
                                 content: "";
@@ -191,6 +223,7 @@ body {
                                 transform: scale(1.07);
                             }
                         }
+
                     }
                 }
 
@@ -284,10 +317,19 @@ body {
                         li {
                             cursor: pointer;
                             text-wrap: nowrap;
+                            transition: all .2s ease-in-out;
 
                             &.active {
                                 background-color: $primaryColor;
                                 color: white !important;
+
+                                &:hover {
+                                    background-color: #0952be;
+                                }
+                            }
+
+                            &:hover {
+                                background-color: #a1c8ff;
                             }
                         }
                     }
@@ -354,6 +396,9 @@ body {
                         }
 
                         .pagination {
+                            width: 100%;
+                            max-width: 55rem;
+                            overflow: hidden;
 
                             a {
                                 cursor: pointer;
@@ -422,20 +467,376 @@ body {
             }
         }
     }
-}
 
-@font-face {
-    font-family: 'Vazir';
-    src: url('../../webfonts/Vazir.eot');
-    /* IE6-8 */
-    src: url('../../webfonts/Vazir.eot?#iefix') format('embedded-opentype'),
-        /* IE6-IE8 fallback */
-        url('../../webfonts/Vazir.woff2') format('woff2'),
-        /* Modern Browsers */
-        url('../../webfonts/Vazir.woff') format('woff'),
-        /* Pretty Modern Browsers */
-        url('../../webfonts/Vazir.ttf') format('truetype');
-    /* Safari, Android, iOS */
-    font-weight: normal;
-    font-style: normal;
+    section.new-route {
+        z-index: 1000;
+        display: none;
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+
+        &.active {
+            display: flex;
+        }
+
+        header {
+
+            >div.container {
+                display: grid;
+                grid-template-columns: max-content max-content 10fr max-content;
+                align-items: center;
+
+                img {
+                    width: 25%;
+                    min-width: 7rem;
+                    max-width: 10rem;
+                    object-fit: contain;
+                }
+
+                button {
+                    width: 3rem;
+                    height: 3rem;
+                }
+            }
+        }
+
+        form {
+            overflow: hidden;
+            height: 600px;
+            width: 100vw;
+            position: relative;
+
+            .Qs-Routers {
+                overflow-x: auto;
+                scroll-snap-type: x mandatory;
+                top: 5rem;
+
+                &::-webkit-scrollbar {
+                    width: 2px;
+                }
+
+                i {
+                    width: 4vw;
+                    min-width: 2rem;
+                    max-width: 2.5rem;
+                    height: 4vw;
+                    min-height: 2rem;
+                    max-height: 2.5rem;
+                    justify-content: center;
+                    align-items: center;
+                    font-style: normal;
+                    position: relative;
+                    margin-right: 1.1rem;
+                    cursor: pointer;
+                    right: 50%;
+                    font-size: 1rem;
+
+                    @media screen and (min-width:992px) {
+                        font-size: 1.5rem;
+                        margin-right: 2rem;
+                    }
+
+                    @media screen and (min-width:768px) {
+                        font-size: 1.3rem;
+                    }
+
+                    &:not(:first-child)::after {
+                        content: "";
+                        height: 1px;
+                        width: .8rem;
+                        background-color: #1f1f1f;
+                        position: absolute;
+                        right: -1rem;
+                        top: 50%;
+
+                        @media screen and (min-width:992px) {
+                            width: 1.6rem;
+                            right: -1.9rem;
+                        }
+                    }
+
+                    &:first-child::before {
+                        content: "";
+                        height: 1px;
+                        width: 50vw;
+                        background-color: #1f1f1f;
+                        position: absolute;
+                        right: -50vw;
+                        top: 50%;
+                    }
+
+                    &:last-child::before {
+                        content: "";
+                        height: 1px;
+                        width: 50vw;
+                        background-color: #1f1f1f;
+                        position: absolute;
+                        left: -50vw;
+                        top: 50%;
+                    }
+
+                    &.done {
+                        background-color: #0ab163 !important;
+                        color: white;
+                        border-color: #0ab163 !important;
+
+                        &:first-child::before {
+                            background-color: #0ab163;
+                        }
+
+                        &:last-child::before {
+                            background-color: #0ab163;
+                        }
+
+                        &::after {
+                            background-color: #0ab163;
+                        }
+                    }
+
+                    &.current {
+                        border: 2px dashed #dd9700 !important;
+                        background-color: white;
+                        color: #dd9700;
+                        scroll-snap-align: center;
+                        animation: rotateCurrent .5s ease-in-out infinite alternate;
+
+                        @keyframes rotateCurrent {
+                            0% {
+                                background-color: #dd97002f;
+                            }
+
+                            100% {
+                                background-color: white;
+                            }
+                        }
+
+                        &:first-child::before {
+                            background-color: #dd9700;
+                        }
+
+                        &:last-child::before {
+                            background-color: #dd9700;
+                        }
+
+                        &::after {
+                            background-color: #dd9700;
+                        }
+                    }
+
+                    &.done-current {
+                        color: white;
+                        background-color: #0ab163 !important;
+                        border: 2px solid #dd9700 !important;
+                        animation: rotateDoneCurrent .5s ease-in-out infinite alternate;
+
+                        @keyframes rotateDoneCurrent {
+                            0% {
+                                box-shadow: 0px 0px 0px 0px #fff;
+                            }
+
+                            100% {
+                                box-shadow: 0px 0px 0px 3px #dd9700;
+                            }
+                        }
+
+                        &:first-child::before {
+                            background-color: #0ab163;
+                        }
+
+                        &:last-child::before {
+                            background-color: #0ab163;
+                        }
+
+                        &::after {
+                            background-color: #0ab163;
+                        }
+                    }
+
+                    &.dont {
+                        border-color: crimson !important;
+                        color: white;
+                        background-color: crimson;
+
+                        &:first-child::before {
+                            background-color: crimson;
+                        }
+
+                        &:last-child::before {
+                            background-color: crimson;
+                        }
+
+                        &::after {
+                            background-color: crimson;
+                        }
+                    }
+
+                    &.normal {
+                        border-color: black !important;
+                        color: black;
+
+                        &:first-child::before {
+                            background-color: black;
+                        }
+
+                        &:last-child::before {
+                            background-color: black;
+                        }
+
+                        &::after {
+                            background-color: black;
+                        }
+                    }
+                }
+            }
+
+            .Question {
+                position: absolute;
+                opacity: 0;
+                transform: translateX(100%);
+                transition: all 0.5s ease;
+                width: 100%;
+                height: fit-content;
+                top: 6rem;
+                left: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                &.active {
+                    opacity: 1;
+                    transform: translateX(0);
+                    z-index: 2;
+                }
+
+                &.out-left {
+                    transform: translateX(-100%);
+                    opacity: 0;
+                    z-index: 1;
+                }
+
+                &.out-right {
+                    transform: translateX(100%);
+                    opacity: 0;
+                    z-index: 1;
+                }
+
+                >div {
+                    height: 50vh;
+                    padding: 0 0 2.5rem 0 !important;
+                    width: 100%;
+                    justify-content: center;
+                    overflow-y: auto;
+                    justify-content: start;
+
+                    &::-webkit-scrollbar {
+                        scrollbar-width: 1px;
+                    }
+
+                    button {
+                        font-size: calc(.2vw + 1.1rem) !important;
+                        max-width: 25rem;
+                        width: calc(100% - 2rem);
+
+                        &:not(.active):hover {
+                            background-color: #dbeaff !important;
+                            color: #0d6dfd;
+                        }
+
+                        &.active {
+                            background-color: #0d6dfd !important;
+
+                            &:hover {
+                                background-color: #005ce6 !important;
+                            }
+                        }
+                    }
+                }
+
+                h4 {
+                    padding: .5rem 1rem;
+                    text-align: center;
+                    margin: 0;
+                }
+
+            }
+
+            .next-prev {
+                grid-template-columns: 1fr 1fr;
+                width: 100%;
+                max-width: 40rem;
+
+                .hide {
+                    display: none !important;
+                }
+
+                #prevBtn,
+                #nextBtn {
+                    justify-items: center;
+                    justify-self: center;
+                    width: 100%;
+                    max-width: 20rem;
+                    font-size: calc(1.1rem + .3vw) !important;
+                }
+
+                #submit {
+                    display: none;
+                    font-size: calc(1.1rem + .3vw) !important;
+
+                    a {
+                        color: white !important;
+                    }
+
+                    &.active {
+                        display: block;
+                    }
+
+                    &.disable {
+                        color: #f0f2f7;
+                        background-color: #5f9fff;
+                        cursor: not-allowed;
+                        border: none;
+
+                        &:hover {
+                            background-color: #5f9fff;
+                        }
+                    }
+                }
+
+                span {
+                    display: none;
+                    border-style: dashed !important;
+                    width: 90%;
+                    max-width: 20rem;
+
+                    &.active {
+                        display: flex;
+                        position: absolute;
+                        top: -2rem;
+                        transform: translate(-50%, -50%);
+                        left: 50%;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+    @font-face {
+        font-family: 'Vazir';
+        src: url('../../webfonts/Vazir.eot');
+        /* IE6-8 */
+        src: url('../../webfonts/Vazir.eot?#iefix') format('embedded-opentype'),
+            /* IE6-IE8 fallback */
+            url('../../webfonts/Vazir.woff2') format('woff2'),
+            /* Modern Browsers */
+            url('../../webfonts/Vazir.woff') format('woff'),
+            /* Pretty Modern Browsers */
+            url('../../webfonts/Vazir.ttf') format('truetype');
+        /* Safari, Android, iOS */
+        font-weight: normal;
+        font-style: normal;
+    }
 }

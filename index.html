@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>courses</title>
+    <title>RouteMaps</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png">
     <link rel="stylesheet" href="styles/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles/css/style.css">
     <link rel="stylesheet" href="styles/all.min.css">
@@ -17,7 +18,7 @@
 <body>
     <header class="row d-flex h-auto align-items-center py-1 m-0 px-2 px-md-3">
 
-        <div class="d-flex gap-1 h-100 p-0 align-items-center col-2 col-md-4 order-1">
+        <div class="d-flex gap-1 h-100 p-0 align-items-center col-10 col-sm-2 col-md-3 order-1 ms-auto">
 
             <div class="more-container">
                 <button class="btn border-0 fs-4 mt-0 mt-lg-2 btn-outline-dark" type="button" data-bs-toggle="offcanvas"
@@ -27,7 +28,7 @@
                 <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
                     aria-labelledby="offcanvasWithBothOptionsLabel">
                     <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Backdrop with scrolling</h5>
+                        <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel"> with scrolling</h5>
                         <button type="button" class="btn-close me-auto ms-0" data-bs-dismiss="offcanvas"
                             aria-label="Close"></button>
                     </div>
@@ -37,36 +38,37 @@
                 </div>
             </div>
 
-            <div class="banner h-100 d-none d-lg-flex">
-                <img class="banner-image img-fluid h-100 p-3 p-md-2" src="./images/banner.png" alt="banner"
+            <div class="banner h-100 d-flex d-sm-none d-md-flex mx-auto mx-sm-0">
+                <img class="banner-image img-fluid h-100 p-1 p-sm-2 mb-1 mb-lg-0" src="./images/banner.png" alt="banner"
                     title="banner">
             </div>
 
         </div>
 
-        <div class="search-container p-0 col-8 col-md-4 order-2 d-flex position-relative justify-content-center">
+        <div
+            class="search-container p-0 col-sm-8 col-md-7 order-2 d-none d-sm-flex position-relative justify-content-center">
             <input type="search" class="form-control form-control-lg my-2" name="" id="">
             <i class="fas fa-search position-absolute top-50 translate-middle start-0 p-3 px-3 ms-4"></i>
         </div>
 
-        <div
-            class="profile-container col-2 col-md-3 order-3 d-flex justify-content-end align-items-center g-0 me-md-auto h-100 ">
-            <img class="profile-image img-fluid rounded-circle h-75 p-1 border border-2" title="profile"
+        <div class="profile-container me-auto col-2 order-3 d-flex justify-content-end align-items-center g-0 h-100 ">
+            <img class="profile-image img-fluid rounded-circle h-75 p-1 m-1 m-sm-0 border border-2" title="profile"
                 src="images/blank-profile.webp" alt="profile">
             <span class="py-3 px-2 d-none d-lg-flex">ورود/عضویت</span>
         </div>
 
     </header>
     <div class="container">
-        <main class="d-flex flex-column gap-4 align-items-center">
+        <main class="d-flex flex-column gap-4 align-items-center mt-3">
             <section class="banner-start row mt-lg-0 d-flex align-items-center">
                 <div
-                    class="image-start order-2 order-lg-1 position-relative d-flex justify-content-center align-items-center col-12 col-lg-6 h-100">
+                    class="image-start d-none d-lg-flex order-2 order-lg-1 position-relative justify-content-center align-items-center col-12 col-lg-6 h-100">
                     <img src="./images/banner-start.png" class="img-fluid position-relative" alt="">
                     <div
                         class="new-students m-0 d-none d-lg-flex flex-column gap-1 rounded-4 object-fit-cover position-absolute align-items-center">
-                        <h6 class="px-3 fw-bold fs-6 pb-2 pt-3 m-0 text-dark">دانشجوهای تازه کار : </h6>
-                        <ul class="m-0 list-students list-unstyled d-flex flex-row-reverse justify-content-center">
+                        <h6 class="px-3 fs-6 pb-2 pt-3 m-0 text-light">دانشجوهای تازه کار : </h6>
+                        <ul
+                            class="m-0 list-students opacity-75 list-unstyled d-flex flex-row-reverse justify-content-center">
                             <li class="profile-student shadow-sm z-0 overflow-hidden border-white border border-2">
                                 <img src="./images/students/student1.jpg" class="img-fluid object-fit-cover w-100 h-100"
                                     alt="student">
@@ -95,7 +97,7 @@
                             class="rounded-circle z-3 m-0 img-fluid object-fit-cover" />
                         <div>
                             <h6 class="fs-6 d-flex align-items-center">موتور قدرتمند ChatGtp <i
-                                    class="fas text-white fa-check p-1 bg-primary rounded-circle fs-7 opacity-75 ms-1 me-auto"></i>
+                                    class="fas text-white fa-check p-1 bg-primary rounded-circle fs-7 opacity-50 ms-1 me-auto"></i>
                             </h6>
                             <p class="fs-7 m-0 text-muted">نمایش مسیر یادگیری از junior تا senior متناسب با علاقه شما
                             </p>
@@ -127,7 +129,7 @@
                     <i class="fas fa-shield-alt"></i>
                 </div>
                 <div
-                    class="text-start gap-3 overflow-hidden order-1 order-lg-2 d-flex flex-column align-items-center col-12 col-lg-6">
+                    class="text-start gap-4 overflow-hidden order-1 order-lg-2 d-flex flex-column align-items-center col-12 col-lg-6">
                     <h1 class="text-center m-0 p-2">
                         مسیر یادگیری برنامه نویسی با
                         <span class="position-relative text-nowrap me-2">
@@ -146,7 +148,7 @@
                         </span>
                         یادگیری برنامه‌نویسی و تکنولوژی‌های روز دنیا را با مسیرهای هوشمند و شخصی‌سازی‌شده شروع کن!
                         در اینجا می‌توانید بهترین دوره‌ها، منابع و راهنمایی‌های یادگیری را متناسب با سطح و علایق خود
-                        پیدا کنید. کافی است شروع کنی، بقیه‌اش با ما!
+                        پیدا کنید. کافی است آغاز کنی، بقیه‌اش با ما!
                     </p>
                     <ul
                         class="d-flex m-0 align-items-center justify-content-center list-unstyled gap-3 gap-sm-4 col-12">
@@ -175,9 +177,10 @@
                             <p class="fs-7 m-0">مهارت تمرین</p>
                         </li>
                     </ul>
-                    <div class="buttons m-0 d-flex gap-3 align-items-center">
-                        <button class="get-started px-3 py-2 btn btn-danger">شروع یک مسیر</button>
-                        <a href="#"
+                    <div
+                        class="buttons m-0 d-flex flex-column flex-sm-row gap-3 align-items-center justify-content-center w-100">
+                        <button class="get-started btn btn-danger fs-6 fw-bold">آغاز یک مسیر</button>
+                        <a
                             class="text-decoration-none p-3 d-flex h-100 align-items-center justify-content-center gap-3">
                             <h6 class="text-dark m-0">تماشا کنید</h6>
                             <i class="fas fa-play position-relative d-flex justify-content-center"></i>
@@ -227,41 +230,18 @@
                 <div
                     class="filter-list bg-primary-subtle w-100 d-flex justify-content-start rounded-2 align-items-center">
                     <ul class="list-unstyled gap-2 w-100 m-0 p-2">
-                        <!-- <li class="text-primary-emphasis py-2 px-4 rounded-3 active">همه</li>
-                        <li class="text-primary-emphasis py-2 px-4 rounded-3 ">موبایل</li>
-                        <li class="text-primary-emphasis py-2 px-4 rounded-3 ">طراحی سایت</li>
-                        <li class="text-primary-emphasis py-2 px-4 rounded-3 ">طراحی</li>
-                        <li class="text-primary-emphasis py-2 px-4 rounded-3 ">دسکتاپ</li>
-                        <li class="text-primary-emphasis py-2 px-4 rounded-3 ">سیستم و سخت افزار</li>
-                        <li class="text-primary-emphasis py-2 px-4 rounded-3 ">هوش مصنوعی</li>
-                        <li class="text-primary-emphasis py-2 px-4 rounded-3 ">بازی سازی</li> -->
                     </ul>
                 </div>
                 <div class="filtered-items p-3 w-100">
                     <ul class="list-unstyled d-grid gap-3 w-100">
-                        <!-- <li class="border d-flex flex-column rounded-4 gap-3 overflow-hidden">
-                            <img src="./images/readyMaps/katlin.png" class="img-fluid" alt="kotlin">
-                            <h5 class="m-0 mx-2">مسیر یادگیری kotlin</h5>
-                            <p class="disc text-muted fs-7 mx-3 my-0">زبان</p>
-                            <div
-                                class="footer mt-auto d-flex flex-column gap-2 w-100 justify-content-between align-items-center">
-                                <div class="rate me-auto ms-2">
-                                    <span class="fs-7 text-muted">۴.۳</span>
-                                    <i class="far fa-star text-success"></i>
-                                </div>
-                                <button
-                                    class="view-btn py-2 rounded-bottom-4 rounded-top-0 w-100 btn btn-primary">مشاهده
-                                    مسیر</button>
-                            </div>
-                        </li> -->
                     </ul>
-                    <nav id="paginationItems" class="">
-                        <ul class="pagination pagination-lg flex-row-reverse justify-content-center">
-                            <li class="disabled" id="prevPage">
-                                <a class="page-link">صفحه قبل</a>
+                    <nav id="paginationItems" class="d-flex justify-content-center">
+                        <ul class="row pagination pagination-lg flex-row-reverse flex-column justify-content-center">
+                            <li class="disabled m-0 p-0 col-3 col-md-2 text-center" id="prevPage">
+                                <a class="page-link w-100 text-center">صفحه قبل</a>
                             </li>
-                            <li class="page-item" id="nextPage">
-                                <a class="page-link">صفحه بعد</a>
+                            <li class="page-item m-0 p-0 col-3 col-md-2 text-center" id="nextPage">
+                                <a class="page-link w-100 text-center">صفحه بعد</a>
                             </li>
                         </ul>
                     </nav>
@@ -269,7 +249,6 @@
             </section>
         </main>
     </div>
-
     <section class="comments-container w-100 d-flex flex-column align-items-center py-5">
         <div class="header d-flex flex-column align-items-center gap-1">
             <h1 class="text-center fs-3 fw-bold">تجربه‌های یادگیری دانشجویان ما</h1>
@@ -321,13 +300,206 @@
             </div>
         </div>
     </section>
-
-    <footer>
-
-    </footer>
+    <section class="new-route overflow-y-auto w-100 bg-light flex-column align-items-center">
+        <header class="w-100 bg-light shadow-sm">
+            <div class="container p-1">
+                <button type="button" class="btn fs-4 ms-1 d-flex align-items-center" id="backToMainBtn">
+                    <i class="fas fa-close"></i>
+                </button>
+                <h1 class="fs-6 fw-bold m-0 text-dark">شروع یک مسیر مخصوص تو</h1>
+                <div class="banner w-100 d-none d-sm-flex justify-content-center">
+                    <img src="./images/banner.png" alt="banner" class="img-fluid d-flex justify-content-center">
+                </div>
+                <button type="button" class="help-page btn fs-4 me-auto me-sm-0">!</button>
+            </div>
+        </header>
+        <form class="container d-flex flex-column align-items-center gap-3 gap-md-4 p-0">
+            <div class="Qs-Routers w-100 d-flex justify-content-center position-fixed py-2">
+                <i class="rounded-circle d-flex border border-dark pt-1 current" id="RI1">1</i>
+                <i class="rounded-circle d-flex border border-dark pt-1" id="RI2">2</i>
+                <i class="rounded-circle d-flex border border-dark pt-1" id="RI3">3</i>
+                <i class="rounded-circle d-flex border border-dark pt-1" id="RI4">4</i>
+                <i class="rounded-circle d-flex border border-dark pt-1" id="RI5">5</i>
+                <i class="rounded-circle d-flex border border-dark pt-1" id="RI6">6</i>
+                <i class="rounded-circle d-flex border border-dark pt-1" id="RI7">7</i>
+                <i class="rounded-circle d-flex border border-dark pt-1" id="RI8">8</i>
+                <i class="rounded-circle d-flex border border-dark pt-1" id="RI9">9</i>
+            </div>
+            <div class="Question Q1 active flex-column align-items-center gap-1 gap-lg-3">
+                <h4>کدام گروه سنی هستی؟</h4>
+                <div class="w-100 d-flex flex-column gap-2 align-items-center">
+                    <button type="button" id="Q1-teenager"
+                        class="btn btn-outline-primary p-2 py-4 py-md-2 fs-4 ans">نوجوان
+                        🧑🏻</button>
+                    <button type="button" id="Q1-young" class="btn btn-outline-primary p-2 py-4 py-md-2 fs-4 ans">
+                        جوان👨‍💻
+                    </button>
+                    <button type="button" id="Q1-middle" class="btn btn-outline-primary p-2 py-4 py-md-2 fs-4 ans">میان
+                        سال
+                        👨‍💼</button>
+                </div>
+            </div>
+            <div class="Question Q2 flex-column align-items-center gap-1 gap-lg-3">
+                <h4>سطح زبان انگلیسی؟</h4>
+                <div class="w-100 d-flex flex-column gap-2 align-items-center">
+                    <button type="button" id="Q2-Illiterate" class="btn btn-outline-primary p-2 py-3 fs-4 ans">
+                        هیچ 🚫
+                    </button>
+                    <button type="button" id="Q2-Elementary" class="btn btn-outline-primary p-2 py-3 fs-4 ans">
+                        مبتدی📘
+                    </button>
+                    <button type="button" id="Q2-Senior" class="btn btn-outline-primary p-2 py-3 fs-4 ans">
+                        خوب📚
+                    </button>
+                </div>
+            </div>
+            <div class="Question Q3 flex-column align-items-center gap-1 gap-lg-3">
+                <h4>تجربت در برنامه‌نویسی؟</h4>
+                <div class="w-100 d-flex flex-column gap-2 align-items-center">
+                    <button type="button" id="Q3-nothing" class="btn btn-outline-primary p-2 py-3 fs-4 ans">
+                        هیچ تجربه‌ای ندارم
+                    </button>
+                    <button type="button" id="Q3-base" class="btn btn-outline-primary p-2 py-3 fs-4 ans">
+                        مفاهیم پایه را بلدم
+                    </button>
+                    <button type="button" id="Q3-project" class="btn btn-outline-primary p-2 py-3 fs-4 ans">
+                        می‌توانم پروژه‌های کوچک بسازم
+                    </button>
+                    <button type="button" id="Q3-more" class="btn btn-outline-primary p-2 py-3 fs-4 ans">
+                        به دنبال تخصص بیشتر هستم
+                    </button>
+                </div>
+            </div>
+            <div class="Question Q4 flex-column align-items-center gap-1 gap-lg-3">
+                <h4>به کدام حوزه‌ تکنولوژی بیشتر علاقه داری؟</h4>
+                <div class="w-100 d-flex flex-column align-items-center gap-2">
+                    <button type="button" id="Q4-web" class="btn btn-outline-primary p-2 py-3 fs-4 ans">
+                        توسعه وب🌐
+                    </button>
+                    <button type="button" id="Q4-mobile" class="btn btn-outline-primary p-2 py-3 fs-4 ans">
+                        توسعه موبایل📱
+                    </button>
+                    <button type="button" id="Q4-AI" class="btn btn-outline-primary p-2 py-3 fs-4 ans">
+                        هوش مصنوعی🤖
+                    </button>
+                    <button type="button" id="Q4-hack" class="btn btn-outline-primary p-2 py-3 fs-4 ans">
+                        امنیت و هک👨🏻‍💻
+                    </button>
+                    <button type="button" id="Q4-game" class="btn btn-outline-primary p-2 py-3 fs-4 ans">
+                        بازی سازی🎮
+                    </button>
+                    <button type="button" id="Q4-hardwar" class="btn btn-outline-primary p-2 py-3 fs-4 ans">
+                        سخت افزار و رباتیک🛠️
+                    </button>
+                </div>
+            </div>
+            <div class="Question Q5 flex-column align-items-center gap-1 gap-lg-3">
+                <h4>سبک یادگیری مورد علاقت؟</h4>
+                <div class="w-100 d-flex flex-column align-items-center gap-2">
+                    <button type="button" id="Q5-video" class="btn btn-outline-primary p-2 py-3 fs-4 ans">
+                        ویدیوهای آموزشی▶️
+                    </button>
+                    <button type="button" id="Q5-document" class="btn btn-outline-primary p-2 py-3 fs-4 ans">
+                        مستندات و کتاب‌ها📋
+                    </button>
+                    <button type="button" id="Q5-project" class="btn btn-outline-primary p-2 py-3 fs-4 ans">
+                        انجام پروژه عملی💻
+                    </button>
+                    <button type="button" id="Q5-bootcamp" class="btn btn-outline-primary p-2 py-3 fs-4 ans">
+                        بوت کمپ ها🏕️
+                    </button>
+                </div>
+            </div>
+            <div class="Question Q6 flex-column align-items-center gap-1 gap-lg-3">
+                <h4>هدف اصلیت از یادگیری برنامه‌نویسی؟</h4>
+                <div class="w-100 d-flex flex-column align-items-center gap-2">
+                    <button type="button" id="Q6-findjob" class="btn btn-outline-primary p-2 py-3 fs-4 ans">
+                        پیداکردن شغل💼
+                    </button>
+                    <button type="button" id="Q6-immigration" class="btn btn-outline-primary p-2 py-3 fs-4 ans">
+                        مهاجرت✈️
+                    </button>
+                    <button type="button" id="Q6-upgrade" class="btn btn-outline-primary p-2 py-3 fs-4 ans">
+                        ارتقای شغلی🚀
+                    </button>
+                    <button type="button" id="Q6-project" class="btn btn-outline-primary p-2 py-3 fs-4 ans">
+                        پروژه شخصی🎯
+                    </button>
+                    <button type="button" id="Q6-startup" class="btn btn-outline-primary p-2 py-3 fs-4 ans">
+                        استارتاپ💡
+                    </button>
+                    <button type="button" id="Q6-fun" class="btn btn-outline-primary p-2 py-3 fs-4 ans">
+                        سرگرمی و علاقه شخصی🍿
+                    </button>
+                </div>
+            </div>
+            <div class="Question Q7 flex-column align-items-center gap-1 gap-lg-3">
+                <h4>چند ساعت در هفته میتونی به یادگیری اختصاص بدی؟</h4>
+                <div class="w-100 d-flex flex-column align-items-center gap-2">
+                    <button type="button" id="Q7-5hour" class="btn btn-outline-primary p-2 py-3 fs-4 ans">
+                        کمتر از ۵ ساعت⏳
+                    </button>
+                    <button type="button" id="Q7-5hour10" class="btn btn-outline-primary p-2 py-3 fs-4 ans">
+                        ۵ تا ۱۰ ساعت⏰
+                    </button>
+                    <button type="button" id="Q7-10hour20" class="btn btn-outline-primary p-2 py-3 fs-4 ans">
+                        ۱۰ تا ۲۰ ساعت🕰️
+                    </button>
+                    <button type="button" id="Q7-hour20" class="btn btn-outline-primary p-2 py-3 fs-4 ans">
+                        بیشتر از ۲۰ ساعت🕒
+                    </button>
+                </div>
+            </div>
+            <div class="Question Q8 flex-column align-items-center gap-1 gap-lg-3">
+                <h4>به ریاضییات و حل مسائل پیچیده علاقه داری؟</h4>
+                <div class="w-100 d-flex flex-column align-items-center gap-2">
+                    <button type="button" id="Q8-no" class="btn btn-outline-primary p-2 py-3 fs-4 ans">
+                        نه❌
+                    </button>
+                    <button type="button" id="Q8-little" class="btn btn-outline-primary p-2 py-3 fs-4 ans">
+                        کمی علاقه دارم🤏
+                    </button>
+                    <button type="button" id="Q8-love" class="btn btn-outline-primary p-2 py-3 fs-4 ans">
+                        عاشقشم🔢❤️
+                    </button>
+                </div>
+            </div>
+            <div class="Question Q9 flex-column align-items-center gap-1 gap-lg-3">
+                <h4>دوست دارید چگونه کار کنید؟</h4>
+                <div class="w-100 d-flex flex-column align-items-center gap-2">
+                    <button type="button" id="Q9-newstartup" class="btn btn-outline-primary p-2 py-3 fs-4 ans">
+                        در استارتاپ های نوپا و پویا
+                    </button>
+                    <button type="button" id="Q9-bigoffice" class="btn btn-outline-primary p-2 py-3 fs-4 ans">
+                        در شرکت های بزرگ و باثبات
+                    </button>
+                    <button type="button" id="Q9-freelancer" class="btn btn-outline-primary p-2 py-3 fs-4 ans">
+                        فریلنسری و پروژه های مستقل
+                    </button>
+                    <button type="button" id="Q9-notsure" class="btn btn-outline-primary p-2 py-3 fs-4 ans">
+                        هنوز مطمئن نیستم!
+                    </button>
+                </div>
+            </div>
+            <div class="next-prev container position-fixed fixed-bottom mb-3 mb-sm-4 mb-md-5 d-grid gap-1 w-100">
+                <button id="prevBtn" type="button" class="btn btn-secondary p-3 fs-3">قبلی
+                    <i class="fas fa-arrow-turn-right text-white fs-5"></i>
+                </button>
+                <button id="nextBtn" type="button" class="btn btn-success p-3 fs-3">بعدی
+                    <i class="fas fa-step-backward text-white fs-5"></i>
+                </button>
+                <button id="submit" type="submit" class="btn btn-primary fs-3 w-100">
+                    مشاهده مسیر
+                </button>
+                <span class="border border-1 fs-6 border-danger p-2 rounded-4 text-center bg-danger-subtle">
+                    باید به همه سوالات پاسخ بدی:)
+                </span>
+            </div>
+        </form>
+    </section>
 
     <script type="module" src="js/script.js"></script>
-
+    <script type="module" src="js/newRout.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/all.min.js"></script>
 </body>

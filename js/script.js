@@ -1,7 +1,7 @@
 import readyMaps from "./data.js";
 
 
-// icons move for mouse move "random render"
+// icons move, mouse move "random render"
 const icons = document.querySelectorAll(".icon-start")
 let iconsShow = [];
 let translateRandom;
@@ -9,21 +9,21 @@ const setIconPosition = () => {
     translateRandom = []
     iconsShow = []
     icons.forEach(icon => {
-        if (window.innerWidth > 768) {
-            let displayRandom = Boolean(Math.floor(Math.random() * 1.5))
-            let zindexRandom = Boolean(Math.floor(Math.random() * 2))
-            translateRandom.push(Math.floor(Math.random() * 60 + Math.random() * 20))
-            icon.style.display = displayRandom == true ? "flex" : "none"
-            iconsShow.push(icon)
-            icon.style.width = `${Math.random() * 55 + 25}px`
-            icon.style.zIndex = zindexRandom == true ? "1" : "-2";
-            icon.style.left = `${(Math.random() * (window.innerWidth / 1.7)) + window.innerWidth / 4}px`
-            icon.style.top = `${120 + (Math.random() * window.innerHeight / 3.5)}px`
-            if (window.innerWidth <= 992) {
-                icon.style.top = `${320 + (Math.random() * window.innerHeight / 2)}px`
-            }
-        } else {
-            icon.style.display = "none"
+        let displayRandom = Boolean(Math.floor(Math.random() * 1.5))
+        let zindexRandom = Boolean(Math.floor(Math.random() * 2))
+        translateRandom.push(Math.floor(Math.random() * 60 + Math.random() * 20))
+        icon.style.display = displayRandom == true ? "flex" : "none"
+        iconsShow.push(icon)
+        icon.style.width = `${Math.random() * 55 + 25}px`
+        icon.style.zIndex = zindexRandom == true ? "1" : "-2";
+        icon.style.left = `${(Math.random() * (window.innerWidth / 1.7)) + window.innerWidth / 4}px`
+        icon.style.top = `${120 + (Math.random() * window.innerHeight / 3.5)}px`
+        icon.style.opacity = (0.2 + Math.random() / 3);
+
+        if (window.innerWidth < 992) {
+            icon.style.opacity = "0.1";
+            icon.style.zIndex = 3;
+            icon.style.top = `${20 + (Math.random() * window.innerHeight / 1.2)}px`
         }
     })
 }
@@ -35,6 +35,12 @@ const changeIconPosition = (e) => {
 document.addEventListener("DOMContentLoaded", setIconPosition)
 document.addEventListener("mousemove", (e) => changeIconPosition(e))
 window.addEventListener("resize", setIconPosition)
+
+
+document.documentElement.scrollLeft = 0;
+document.body.scrollLeft = 0;
+
+
 
 
 // foxed header on scroll
@@ -150,7 +156,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // ساخت دکمه‌های شماره صفحات بین startPage تا endPage
         for (let i = startPage; i <= endPage; i++) {
             const li = document.createElement("li");
-            li.classList.add("page-item", "page-number");
+            li.classList.add("page-item", "page-number", 'col-2', 'p-0', 'text-center', 'col-md-1');
             if (i === currentPage) li.classList.add("active");
             li.innerHTML = `<a class="page-link" href="#">${i}</a>`;
             li.addEventListener("click", e => {
@@ -271,4 +277,19 @@ document.addEventListener("DOMContentLoaded", () => {
     };
     addItems({ title: "همه", id: "all", active: true })
     setfilterCategory()
+})
+
+
+// شروع یک مسیر
+const getStartedBtn = document.querySelector(".get-started")
+const newRouteContainer = document.querySelector(".new-route")
+getStartedBtn.addEventListener("click", () => {
+    newRouteContainer.classList.add("active")
+    document.body.style.overflow = 'hidden';
+    let hiddenDiv = document.querySelector("body>div")
+    let hiddenSec = document.querySelector("body>section")
+    let hiddenHeader = document.querySelector("body>header")
+    hiddenDiv.style.display = "none"
+    hiddenHeader.style.display = "none"
+    hiddenSec.style.display = "none"
 })
